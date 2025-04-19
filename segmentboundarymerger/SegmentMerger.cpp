@@ -52,7 +52,7 @@ void SegmentMerger::handlePartialOverlap(const PointCollection &points)
 
         for (const auto &new_point: new_points) {
             merged_points.insert(
-                    std::upper_bound(merged_points.begin(), merged_points.end(), new_points.front()),
+                    std::upper_bound(merged_points.begin(), merged_points.end(), new_point),
                     new_point);
         }
     }
